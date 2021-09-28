@@ -1,3 +1,15 @@
+<h1>Andameto do Projeto</h1>
+  
+28/09/2021
+  
+Estamos na fase de concepção inicial do nosso projeto. Disponibilizamos um *wireframe* com um esboço de um esqueleto com o que pretendemos montar como funcionalidade para o **LabeNinja**, o que possibilita uma melhor visualização do projeto por toda equipe. Também definimos nossa paleta de cores, o que nos ajudará na estilização do projeto. Além disso, implementamos a navegabilidade entre as páginas do site, para que possamos trabalhar com mais tranquilidade em arquivos separados. Estamos agora atacando as funcionalidades principais do projeto. Em breve teremos mais novidades! 
+    
+<h5>Equipe LabeNinja 3<h5/>
+      
+<hr />
+<hr />
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
