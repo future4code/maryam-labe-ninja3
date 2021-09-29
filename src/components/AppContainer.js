@@ -8,6 +8,7 @@ import GlobalStyle from '../theme/GlobalStyle'
 import Footer from './Footer'
 import styled from 'styled-components';
 import Axios from 'axios'
+import Carrinho from './Carrinho'
 
 
 const headers = {
@@ -22,12 +23,27 @@ export class AppContainer extends Component {
     paginaAnunciar: false,
     paginaPesquisar: false,
     paginaDetalhe: false,
+    paginaCarrinho: false,
     allJobs: [],
-    jobDetalhe: []
+    jobDetalhe: [],
+    jobsCarrinho:[]
   }
 
   componentDidMount = () => {
     this.getAllJobs()
+
+    if(window.localStorage.getItem("carrinho")){
+      let listaCarrinhoStorage = JSON.parse(window.localStorage.getItem("carrinho"))
+      this.setState({jobsCarrinho: listaCarrinhoStorage})
+    }
+  }
+
+  componentDidUpdate = (prevProps, prevState) => {
+
+    if (prevState.jobsCarrinho !== this.state.jobsCarrinho){
+      window.localStorage.setItem("carrinho", JSON.stringify(this.state.jobsCarrinho))
+    }
+
   }
 
   getAllJobs = () => {
@@ -45,6 +61,7 @@ export class AppContainer extends Component {
     this.setState({paginaDetalhe: false})
     this.setState({paginaHome: false})
     this.setState({paginaPesquisar: false})
+    this.setState({paginaCarrinho: false})
   }
 
   onClickHome = () => {
@@ -52,6 +69,7 @@ export class AppContainer extends Component {
     this.setState({paginaAnunciar: false})
     this.setState({paginaDetalhe: false})
     this.setState({paginaPesquisar: false})
+    this.setState({paginaCarrinho: false})
   }
 
   onClickPesquisar = () => {
@@ -59,6 +77,7 @@ export class AppContainer extends Component {
     this.setState({paginaHome: false})
     this.setState({paginaAnunciar: false})
     this.setState({paginaDetalhe: false})
+    this.setState({paginaCarrinho: false})
 
     this.getAllJobs()
   }
@@ -68,7 +87,33 @@ export class AppContainer extends Component {
     this.setState({paginaPesquisar: false})
     this.setState({paginaHome: false})
     this.setState({paginaAnunciar: false})
+    this.setState({paginaCarrinho: false})
+
     this.setState({jobDetalhe: job})
+  }
+
+  onClickCarrinho = () => {
+    this.setState({paginaCarrinho: true})
+    this.setState({paginaDetalhe: false})
+    this.setState({paginaPesquisar: false})
+    this.setState({paginaHome: false})
+    this.setState({paginaAnunciar: false})
+    
+  }
+
+  onClickAdicionar = (job) => {
+   const novoJobsCarrinho = [...this.state.jobsCarrinho, job]
+
+   this.setState({jobsCarrinho: novoJobsCarrinho})
+  }
+
+  onClickExcluirCarrinho = (jobExcluir) => {
+
+    let novaListaDeJobs = this.state.jobsCarrinho.filter((job) => {
+      return (job.id !== jobExcluir.id)
+    })
+
+    this.setState({jobsCarrinho: novaListaDeJobs})
   }
 
   renderizaTela = () => {
@@ -94,6 +139,14 @@ export class AppContainer extends Component {
       return(
         <Detalhe
         jobDetalhe={this.state.jobDetalhe}
+        onClickAdicionar={this.onClickAdicionar}
+        />
+      )
+    } else if(this.state.paginaCarrinho){
+      return(
+        <Carrinho
+        jobsCarrinho={this.state.jobsCarrinho}
+        onClickExcluirCarrinho={this.onClickExcluirCarrinho}
         />
       )
     }
@@ -107,6 +160,8 @@ export class AppContainer extends Component {
         onClickAnunciar={this.onClickAnunciar}
         onClickHome={this.onClickHome}
         onClickPesquisar={this.onClickPesquisar}
+        onClickCarrinho={this.onClickCarrinho}
+        jobsCarrinho={this.state.jobsCarrinho}
         />
         {this.renderizaTela()}
         <Footer/>
