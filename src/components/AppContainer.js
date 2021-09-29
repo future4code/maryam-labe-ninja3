@@ -6,15 +6,38 @@ import Pesquisar from './Pesquisar'
 import Detalhe from './Detalhe'
 import GlobalStyle from '../theme/GlobalStyle'
 import Footer from './Footer'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import Axios from 'axios'
 
+
+const headers = {
+  headers : {
+    Authorization:"e91a8334-e12c-42bc-b37f-a45f4631ab2a"
+  }
+}
 
 export class AppContainer extends Component {
   state = {
     paginaHome: true,
     paginaAnunciar: false,
     paginaPesquisar: false,
-    paginaDetalhe: false
+    paginaDetalhe: false,
+    allJobs: [],
+    jobDetalhe: []
+  }
+
+  componentDidMount = () => {
+    this.getAllJobs()
+  }
+
+  getAllJobs = () => {
+    Axios.get('https://labeninjas.herokuapp.com/jobs', headers)
+    .then((res) => {
+      this.setState({allJobs: res.data.jobs})
+    })
+    .catch((err) => {
+      alert(err.response.data.error)
+    })
   }
 
   onClickAnunciar = () => {
@@ -36,13 +59,16 @@ export class AppContainer extends Component {
     this.setState({paginaHome: false})
     this.setState({paginaAnunciar: false})
     this.setState({paginaDetalhe: false})
+
+    this.getAllJobs()
   }
 
-  onClickDetalhe = () => {
+  onClickDetalhe = (job) => {
     this.setState({paginaDetalhe: true})
     this.setState({paginaPesquisar: false})
     this.setState({paginaHome: false})
     this.setState({paginaAnunciar: false})
+    this.setState({jobDetalhe: job})
   }
 
   renderizaTela = () => {
@@ -61,11 +87,14 @@ export class AppContainer extends Component {
       return(
         <Pesquisar
         onClickDetalhe={this.onClickDetalhe}
+        allJobs={this.state.allJobs}
         />
       )
     } else if (this.state.paginaDetalhe){
       return(
-        <Detalhe/>
+        <Detalhe
+        jobDetalhe={this.state.jobDetalhe}
+        />
       )
     }
   }
