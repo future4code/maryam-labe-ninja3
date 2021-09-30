@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Home from './Home';
 
 const MainContainerFooter = styled.div`
-    background-color: #9869BF;
+    background-image: linear-gradient(to bottom, #808080, black);
     height: 20vh;
     position: fixed;
     bottom: 0;
@@ -20,8 +20,9 @@ const MainContainerFooter = styled.div`
     }
 
     p{
-        color: #DFDCEF;
-        margin-left: 20px;
+        font-size: 10px;
+        color: white;
+        margin-left: 15px;
     }
 `
 const FooterColunaEsq = styled.div`
@@ -71,7 +72,7 @@ class Footer extends React.Component{
                     </ColunaLinks>
                 </FooterColunaEsq>
                 <FooterColunaDir>
-                    <p>Criado por Gabriel Manoel, Luiz Ricardo da Silva, Roberval Dionisio, Silvio Ribeiro e Stephane Oliveira</p>
+                    <p>Criado por Gabriel Manoel, Luiz Ricardo da Silva, Roberval Dionisio, Silvio Ribeiro e Sthefane Oliveira</p>
                     <p>Curso Web Full Stack na Labenu</p>
                     <p>© 2021 LabeNinjas serviços S.A - Instituição fictícia de serviços</p>
                 </FooterColunaDir>

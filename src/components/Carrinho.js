@@ -2,14 +2,15 @@ import React from "react";
 import styled from "styled-components";
 
 const Detalhe = styled.div`
-    background-color: #9869BF;
+    background-color:white ;
     width: 80vw;
     display: grid;
     grid-template-columns: 10vw 1fr 10vw 20vw;
-    margin-top: 3vh;
+    margin-top: 4vh;
     margin-left: 5vw;
     height: 10vh;
     border-radius: 10px 20px;
+    border-radius:1px solid red;
     
 
 `
@@ -21,7 +22,8 @@ const MainContainerCarrinho = styled.div`
     flex-direction: column;
 
     h1{
-        color:#9869BF;
+        color:black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 `
 
@@ -29,7 +31,7 @@ const ContainerTitulo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #DFDCEF;
+    color: black;
 `
 
 const ContainerPagamento = styled.div`
@@ -37,7 +39,7 @@ const ContainerPagamento = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: #DFDCEF;
+    color: black;
 `
 
 const ContainerPreco = styled.div`
@@ -45,7 +47,7 @@ const ContainerPreco = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: #DFDCEF;
+    color: black;
 `
 
 const Preco = styled.div`
@@ -79,7 +81,7 @@ const ValorTotal = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #9869BF;
+    color: black;
     width: 50vw;
 `
 

@@ -6,33 +6,40 @@ import carrinho from '../img/carrinho.png'
 const MainContainerHeader = styled.div`
     display: flex;
     justify-content: space-between;
-    background-color: #9869BF;
+    background-color: #A9A9A9;
     height: 10vh;
 
     h1{
         margin-left: 3vw;
-        color: #DFDCEF;
+        color: white;
+        cursor: pointer;
     }
+    
 `
 
 const Button = styled.button`
-    height: 20px;
+    height: 25px;
     width: 150px;
     margin-right: 2vw;
     margin-top: 5vh;
-    background-color: #9869BF;
-    border: none;
-    border-bottom: 1px solid #DFDCEF;
-    color: #DFDCEF;
+    background-color: #A9A9A9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: black;
+    font-size: 1rem;
+     
+    
 
     :hover{
-        background-color: #DFDCEF;
+        
         cursor: pointer;
-        color: black    ;
+        color: #4F4F4F    ;
+        
     }
 
     :active{
-        background-color: ghostwhite;
+        background-color: ;
         cursor: pointer;
         color: black    ;
     }
