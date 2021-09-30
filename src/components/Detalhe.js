@@ -6,6 +6,7 @@ const MainContainerDetalhe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
 
     h1{
         color: #9869BF;

@@ -49,6 +49,37 @@ const Preco = styled.div`
     margin-bottom: 16px;
 `
 
+const ContainerGeral = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 150vh;
+    min-height: 80vh;
+`
+
+const DivFiltros = styled.div`
+    height: 30vh;
+    width: 40vw;
+    margin-right: 4vw;
+`
+
+const DivFiltroOrdenacao = styled.div`
+    display: flex;
+    height: 30vh;
+`
+const DivInputs = styled.div`
+    margin-bottom: 2vh;
+`
+const DivDeOrdenacoes = styled.div`
+    display: flex;
+`
+
+const CardsOrdenacoes = styled.div`
+    margin-right: 2vw;
+    border-right: 2px solid #9869BF;
+`
+
 class Pesquisar extends React.Component{
     render(){
 
@@ -85,9 +116,50 @@ class Pesquisar extends React.Component{
         })
 
         return(
-            <MainContainerPesquisa>
-                {renderizaJobs}
-            </MainContainerPesquisa>
+            <ContainerGeral>
+                <DivFiltroOrdenacao>
+                    <DivFiltros>
+                        <h2>Filtros</h2>
+                        <DivInputs>
+                            <label htmlFor="valorMinimo" >Valor Mínimo:</label>
+                            <input id="valorMinimo" type="number" min='0' />
+                        </DivInputs>
+                        <DivInputs>
+                            <label htmlFor="valorMaximo" >Valor Máximo:</label>
+                            <input id="valorMaximo" type="number" min='0' />
+                            <button>Filtrar Por Valor</button>
+                        </DivInputs>
+                        <DivInputs>
+                            <label htmlFor='servicoNome' >Nome do Serviço:</label>
+                            <input id='servicoNome' placeholder="Nome..." />
+                            <button>Filtrar Por Nome</button>
+                        </DivInputs>
+                    </DivFiltros>
+                    <DivFiltros>
+                        <h2>Ordernar Por</h2>
+                        <DivDeOrdenacoes>
+                            <CardsOrdenacoes>
+                                <h4>Nome do Serviço</h4>
+                                <button onClick={this.props.onClickNomeCrescente} >Crescente</button>
+                                <button onClick={this.props.onClickNomeDecrescente} >Decrescente</button>
+                            </CardsOrdenacoes>
+                            <CardsOrdenacoes>
+                                <h4>Preço</h4>
+                                <button onClick={this.props.onClickPrecoCrescente} >Crescente</button>
+                                <button onClick={this.props.onClickPrecoDecrescente } >Decrescente</button>
+                            </CardsOrdenacoes>  
+                            <CardsOrdenacoes>
+                                <h4>Prazo</h4>
+                                <button onClick={this.props.onClickPrazoCrescente} >Crescente</button>
+                                <button onClick={this.props.onClickPrazoDecrescente} >Decrescente</button>
+                            </CardsOrdenacoes> 
+                        </DivDeOrdenacoes>
+                    </DivFiltros>
+                </DivFiltroOrdenacao>
+                <MainContainerPesquisa>
+                    {renderizaJobs}
+                </MainContainerPesquisa>
+            </ContainerGeral>
         )
     }
 }

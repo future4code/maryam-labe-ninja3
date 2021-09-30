@@ -32,6 +32,7 @@ const Button = styled.button`
 const MainHome = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
 `
 
 const ContainerImagem = styled.div`

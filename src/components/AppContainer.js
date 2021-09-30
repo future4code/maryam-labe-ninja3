@@ -80,6 +80,8 @@ export class AppContainer extends Component {
     this.setState({paginaCarrinho: false})
 
     this.getAllJobs()
+
+    console.log(new Date(this.state.allJobs[0].dueDate) - new Date(this.state.allJobs[1].dueDate))
   }
 
   onClickDetalhe = (job) => {
@@ -116,6 +118,84 @@ export class AppContainer extends Component {
     this.setState({jobsCarrinho: novaListaDeJobs})
   }
 
+  onClickPrecoCrescente = () => {
+
+    let listaOrdenada = this.state.allJobs.sort((a, b) => {
+      return (a.price - b.price)
+    })
+
+    this.setState({allJobs:listaOrdenada})
+  }
+
+  onClickPrecoDecrescente = () => {
+
+    let listaOrdenada = this.state.allJobs.sort((a, b) => {
+      return -(a.price - b.price)
+    })
+
+    this.setState({allJobs:listaOrdenada})
+  }
+
+  onClickNomeCrescente = () => {
+
+    let listaOrdenada = this.state.allJobs.sort((a, b) => {
+      if(a.title > b.title){
+        return 1
+      } else if (b.title > a.title){
+        return -1
+      } else{
+        return 0
+      }
+    })
+
+    this.setState({allJobs:listaOrdenada})
+  }
+
+  onClickNomeDecrescente = () => {
+
+    let listaOrdenada = this.state.allJobs.sort((a, b) => {
+      if(a.title > b.title){
+        return -1
+      } else if (b.title > a.title){
+        return 1
+      } else{
+        return 0
+      }
+    })
+
+    this.setState({allJobs:listaOrdenada})
+  }
+
+  onClickPrazoCrescente = () => {
+
+    let listaOrdenada = this.state.allJobs.sort((a, b) => {
+      if(new Date(a.dueDate) > new Date(b.dueDate)){
+        return 1
+      } else if (new Date(a.dueDate) < new Date(b.dueDate)){
+        return -1
+      } else{
+        return 0
+      }
+    })
+
+    this.setState({allJobs:listaOrdenada})
+  }
+
+  onClickPrazoDecrescente = () => {
+
+    let listaOrdenada = this.state.allJobs.sort((a, b) => {
+      if(new Date(a.dueDate) > new Date(b.dueDate)){
+        return -1
+      } else if (new Date(a.dueDate) < new Date(b.dueDate)){
+        return 1
+      } else{
+        return 0
+      }
+    })
+
+    this.setState({allJobs:listaOrdenada})
+  }
+
   renderizaTela = () => {
     if (this.state.paginaHome){
       return(
@@ -133,6 +213,12 @@ export class AppContainer extends Component {
         <Pesquisar
         onClickDetalhe={this.onClickDetalhe}
         allJobs={this.state.allJobs}
+        onClickPrecoCrescente={this.onClickPrecoCrescente}
+        onClickPrecoDecrescente ={this.onClickPrecoDecrescente }
+        onClickNomeCrescente={this.onClickNomeCrescente}
+        onClickNomeDecrescente={this.onClickNomeDecrescente}
+        onClickPrazoCrescente={this.onClickPrazoCrescente}
+        onClickPrazoDecrescente={this.onClickPrazoDecrescente}
         />
       )
     } else if (this.state.paginaDetalhe){
