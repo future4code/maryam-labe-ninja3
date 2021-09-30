@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import icone1 from "../img/ninjaIcon.png"
+import icone1 from "../img/ninjaIcon.png";
+import carrinho from '../img/carrinho.png'
 
 const MainContainerHeader = styled.div`
     display: flex;
@@ -17,7 +18,7 @@ const MainContainerHeader = styled.div`
 const Button = styled.button`
     height: 20px;
     width: 150px;
-    margin-right: 6vw;
+    margin-right: 2vw;
     margin-top: 5vh;
     background-color: #9869BF;
     border: none;
@@ -57,6 +58,31 @@ const LogoHeader = styled.img`
     /* margin-right: 12px; */
 `
 
+const ImagemCarrinho = styled.img`
+    margin-right: 5vw;
+    width:60px;
+    height:60px;
+    margin-top: 1vh;
+
+    :hover{
+        cursor: pointer;
+    }
+`
+
+const Contador = styled.div`
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background: #DFDCEF;
+    border: 1px solid #DFDCEF;
+    margin-right: -9vw;
+    color:  #9869BF;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 class Header extends React.Component {
     render(){
         return(
@@ -68,6 +94,14 @@ class Header extends React.Component {
                 <Button onClick={this.props.onClickHome} >Home</Button>
                 <Button onClick={this.props.onClickAnunciar} >Anunciar Serviço</Button>
                 <Button onClick={this.props.onClickPesquisar} >Pesquisar Serviço</Button>
+                {(this.props.jobsCarrinho.length > 0) &&
+                (
+                <Contador>
+                    {this.props.jobsCarrinho.length}
+                </Contador>)
+                }
+                <ImagemCarrinho src={carrinho} onClick={this.props.onClickCarrinho} />
+            
             </MainContainerHeader>
         )
     }

@@ -84,7 +84,7 @@ class Detalhe extends React.Component{
                         </div>
                     </ContainerPagamento>
                     <div>
-                        <Button>Adicionar ao Carrinho</Button>
+                        <Button onClick={() => this.props.onClickAdicionar(this.props.jobDetalhe)} >Adicionar ao Carrinho</Button>
                     </div>
                 </ContainerSecundario>
             </MainContainerDetalhe>
