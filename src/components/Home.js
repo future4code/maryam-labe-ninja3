@@ -31,7 +31,9 @@ const Button = styled.button`
 `
 const MainHome = styled.div`
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+    
 `
 
 const ContainerImagem = styled.div`
@@ -45,11 +47,25 @@ const ImagemLogo = styled.img`
 `
 
 const ContainerInfo = styled.div`
+    margin-top: 30px;
+    margin-right: 15px;
     display: flex;
+    border: 1px solid #9869BF;
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px 5px silver;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #9869BF;
+    h2 {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    p {
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+
+    }
+   
 `
 class Home extends React.Component{
     render(){
@@ -60,16 +76,12 @@ class Home extends React.Component{
                 </ContainerImagem>
                 <ContainerInfo>
                     <h2>Quem Somos</h2>
-                    <p>shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg shfgbsdfdna shd gash gh dfh ghas ghsdfg dfasdghg gasdferdfgsfd vvdfhgsdhsdf bdsbfgnfgnsghsdf bdnsghshsdfb dbsfghsggdfv 
-                        sdfgshsfdb dfgsdfgsb vsdfgsdhg</p>
+                    <p>Somos uma empresa especializada em serviços. Usamos nosso site para conectar pessoas 
+                        que querem trabalhar e pessoas que querem contratar o serviço, fazendo assim com que facilite 
+                        a contratação e prestacão de qualquer tipo de trabalho.
+                        Totalmente pratico e seguro.
+                        Utilize já!
+                    </p>
                     <div>
                         <Button onClick={this.props.onClickAnunciar} >Quero ser um Ninja</Button>
                         <Button onClick={this.props.onClickPesquisar} >Contratar um Ninja</Button>

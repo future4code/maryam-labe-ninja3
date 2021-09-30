@@ -7,8 +7,19 @@ const PageCadastro = styled.div `
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  input {
+      
+      border-radius: 3px 3px 3px;
+      font-size: 20px;
+      text-align: center;
+      width: auto;
+      box-shadow: 3px 2px 2px 2px silver;
+  }
   
-  h3 {color: #9869BF}
+  h3 {color: black}
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
 `
 
 const headers = {
@@ -16,6 +27,8 @@ const headers = {
         Authorization: "e91a8334-e12c-42bc-b37f-a45f4631ab2a"
     }
 }
+
+
 
 class Anunciar extends React.Component{
     state = {
