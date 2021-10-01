@@ -16,27 +16,62 @@ const MainContainerFooter = styled.div`
     img{
         width: 80px;
         height: 80px;
+        
     }
     p{
-        font-size: 10px;
+        font-size: 15px;
         color: white;
         margin-left: 15px;
+        
     }
+    
+    @media (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 `
 const FooterColunaEsq = styled.div`
 display: flex;
 align-items: center;
 margin-left: 30px;
+@media (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        text-align: center;
+    }
+
+    img{
+        margin-left: 15px;
+    }
+}
+
 `
 const FooterColunaDir = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: center;
 margin-right: 20px;
+@media (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
 `
 const ColunaLinks = styled.div`
 display: grid;
 grid-template-columns: 1fr;
+
+
+
 `
 const ColunaRedesSociais = styled.div`
 display: flex;
@@ -46,7 +81,13 @@ img {
     height: 40px;
     margin: 0 15px;
 }
+@media (max-width: 800px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 `
+
 
 class Footer extends React.Component{
     render(){
