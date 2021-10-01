@@ -1,23 +1,3 @@
-// import React from "react";
-// import axios from "axios";
-// import styled from "styled-components";
-
-// const PageCadastro = styled.div `
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   min-height: 80vh;
-  
-//   h3 {color: #9869BF}
-// `
-
-// const headers = {
-//     headers: {
-//         Authorization: "e91a8334-e12c-42bc-b37f-a45f4631ab2a"
-//     }
-// }
-
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
@@ -28,13 +8,20 @@ const PageCadastro = styled.div `
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  input {
-      
-      border-radius: 3px 3px 3px;
-      font-size: 20px;
-      text-align: center;
-      width: auto;
-      box-shadow: 3px 2px 2px 2px silver;
+  div {
+    @media (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
+  }
+  input {      
+    border-radius: 3px 3px 3px;
+    font-size: 20px;
+    text-align: center;
+    width: auto;
+    box-shadow: 3px 2px 2px 2px silver;
   }
   
   h3 {color: black}
@@ -49,6 +36,10 @@ const Button = styled.button`
     border: none;
     border-bottom: 1px solid #A9A9A9;
     color: black;
+    @media (max-width: 800px){
+        width: 20vw;
+        margin-bottom: 10px;
+    }
 
     :hover{
         cursor: pointer;
