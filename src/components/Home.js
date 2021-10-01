@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import imagen from '../img/ninjaLogo2.png'
-import HomeResponsividade from "./responsividade/Home/Home.css"
+
 // const Button = styled.button`
 //     width: 184px;
 //     height: 36px;
@@ -128,8 +128,7 @@ class Home extends React.Component{
                     <ImagemLogo className="img_main" src={imagen} />
                 </ContainerImagem>
                 <ContainerInfo>
-                   <div className="info">
-                   <h2>Quem Somos</h2>
+                    <h2>Quem Somos</h2>
                     <p>
                         Somos uma empresa especializada em serviços. Usamos nosso site para conectar pessoas 
                         que querem trabalhar e pessoas que querem contratar o serviço, fazendo assim com que facilite 
@@ -141,7 +140,6 @@ class Home extends React.Component{
                         <Button onClick={this.props.onClickAnunciar} >Quero ser um Ninja</Button>
                         <Button onClick={this.props.onClickPesquisar} >Contratar um Ninja</Button>
                     </div>
-                </div> 
                 </ContainerInfo>
             </MainHome>
         )
