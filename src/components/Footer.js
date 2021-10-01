@@ -1,40 +1,3 @@
-// import React from 'react';
-// import styled from 'styled-components';
-
-// const MainContainerFooter = styled.div`
-//     background-color: #9869BF;
-//     height: 10vh;
-//     /* position: fixed;
-//     bottom: 0;
-//     right: 0;
-//     left: 0; */
-    
-//     .page-wrap:after{
-//         height: 10vh;
-//     }
-// /* 
-//     .page-wrap:after {
-//   height: 60px; 
-// }
-//      */
-//     h3{
-//         margin-left: 3vw;
-//         color: #DFDCEF;
-//     }
-// `
-
-// class Footer extends React.Component{
-//     render(){
-//         return(
-//             <MainContainerFooter>
-//                 <h3>Eu sou o Footer</h3>
-//             </MainContainerFooter>
-//         )
-//     }
-// }
-
-// export default Footer
-
 import React from 'react';
 import styled from 'styled-components';
 import Home from './Home';
@@ -52,12 +15,20 @@ const MainContainerFooter = styled.div`
     img{
         width: 80px;
         height: 80px;
+        
     }
     p{
-        font-size: 10px;
+        font-size: 15px;
         color: white;
         margin-left: 15px;
     }
+    
+    @media (max-width: 800px){
+    width: 100vh;
+    text-align: center;
+    padding: 10px;
+}
+
 `
 const FooterColunaEsq = styled.div`
 display: flex;
@@ -73,6 +44,7 @@ margin-right: 20px;
 const ColunaLinks = styled.div`
 display: grid;
 grid-template-columns: 1fr;
+
 `
 const ColunaRedesSociais = styled.div`
 display: flex;
@@ -82,7 +54,12 @@ img {
     height: 40px;
     margin: 0 15px;
 }
+@media (max-width: 800px) {
+
+}
+
 `
+
 
 class Footer extends React.Component{
     render(){
