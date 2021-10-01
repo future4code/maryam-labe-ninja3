@@ -1,3 +1,23 @@
+// import React from "react";
+// import axios from "axios";
+// import styled from "styled-components";
+
+// const PageCadastro = styled.div `
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 80vh;
+  
+//   h3 {color: #9869BF}
+// `
+
+// const headers = {
+//     headers: {
+//         Authorization: "e91a8334-e12c-42bc-b37f-a45f4631ab2a"
+//     }
+// }
+
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
@@ -8,8 +28,37 @@ const PageCadastro = styled.div `
   justify-content: center;
   align-items: center;
   min-height: 80vh;
+  input {
+      
+      border-radius: 3px 3px 3px;
+      font-size: 20px;
+      text-align: center;
+      width: auto;
+      box-shadow: 3px 2px 2px 2px silver;
+  }
   
-  h3 {color: #9869BF}
+  h3 {color: black}
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;
+`
+
+const Button = styled.button`
+    height: 20px;
+    width: 8vw;
+    background-color: #DFDCEF;
+    border: none;
+    border-bottom: 1px solid #A9A9A9;
+    color: black;
+
+    :hover{
+        cursor: pointer;
+        background-image: linear-gradient(to bottom right, #D3D3D3, white);
+    }
+    :active{
+        background-color: ghostwhite;
+        cursor: pointer;
+        color: black    ;
+    }
 `
 
 const headers = {
@@ -17,6 +66,7 @@ const headers = {
         Authorization: "e91a8334-e12c-42bc-b37f-a45f4631ab2a"
     }
 }
+
 
 class Anunciar extends React.Component{
     state = {
@@ -138,7 +188,7 @@ class Anunciar extends React.Component{
                     onChange={this.inserirPrazo}
                 />
                 <br></br>
-                <button onClick={this.adicionarCasdatro}>Cadastrar</button>
+                <Button onClick={this.adicionarCasdatro}>Cadastrar</Button>
             </PageCadastro>
         )
     }

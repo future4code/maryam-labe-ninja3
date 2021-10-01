@@ -2,16 +2,16 @@ import React from "react";
 import styled from "styled-components";
 
 const Detalhe = styled.div`
-    background-color: #9869BF;
+    background-color:white ;
     width: 80vw;
     display: grid;
     grid-template-columns: 10vw 1fr 10vw 20vw;
-    margin-top: 3vh;
+    margin-top: 4vh;
     margin-left: 5vw;
     height: 10vh;
     border-radius: 10px 20px;
+    border-radius:1px solid red;
     
-
 `
 
 const MainContainerCarrinho = styled.div`
@@ -20,9 +20,9 @@ const MainContainerCarrinho = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     min-height: 80vh;
-
     h1{
-        color:#9869BF;
+        color:black;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 `
 
@@ -30,7 +30,7 @@ const ContainerTitulo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #DFDCEF;
+    color: black;
 `
 
 const ContainerPagamento = styled.div`
@@ -38,7 +38,7 @@ const ContainerPagamento = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: #DFDCEF;
+    color: black;
 `
 
 const ContainerPreco = styled.div`
@@ -46,7 +46,7 @@ const ContainerPreco = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    color: #DFDCEF;
+    color: black;
 `
 
 const Preco = styled.div`
@@ -58,17 +58,15 @@ const Button = styled.button`
     width: 150px;
     margin-left: 5vw;
     margin-top: 3vh;
-    background-color: #9869BF;
+    background-color: white;
     border: none;
-    border-bottom: 1px solid #DFDCEF;
-    color: #DFDCEF;
-
+    border-bottom: 1px solid black;
+    color: black;
     :hover{
         background-color: #DFDCEF;
         cursor: pointer;
         color: black    ;
     }
-
     :active{
         background-color: ghostwhite;
         cursor: pointer;
@@ -80,15 +78,37 @@ const ValorTotal = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #9869BF;
+    color: black;
     width: 50vw;
 `
 
 const DivInvisivel = styled.div`
-    background-color: #9869BF;
+    background-color: #A9A9A9;
     margin-top: 4vh;
     width: 90vw;
     height: 2px;
+`
+
+const ButtonLimpar = styled.button`
+    height: 20px;
+    width: 150px;
+    background-color: #DFDCEF;
+    border: none;
+    border-bottom: 1px solid black;
+ 
+    color: black;
+
+    :hover{
+        background-color: white;
+        cursor: pointer;
+        color: black;
+    }
+
+    :active{
+        background-color: ghostwhite;
+        cursor: pointer;
+        color: black    ;
+    }
 `
 
 class Carrinho extends React.Component {
@@ -149,6 +169,7 @@ class Carrinho extends React.Component {
         return(
             <MainContainerCarrinho>
                 <h1>Seu Carrinho</h1>
+                <ButtonLimpar onClick={this.props.limparCarrinho} >Limpar Carrinho</ButtonLimpar>
                 {renderizaCarrinho}
                 <DivInvisivel ></DivInvisivel >
                 {this.valorTotal()}
