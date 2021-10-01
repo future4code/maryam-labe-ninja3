@@ -13,6 +13,10 @@ const MainContainerHeader = styled.div`
         color: white;
         cursor: pointer;
     }
+
+    @media (max-width: 800px){
+        width: 100vw;
+    }
     
 `
 
@@ -40,6 +44,13 @@ const Button = styled.button`
         color: black    ;
     }
 
+    @media (max-width: 800px){
+        width: 50px;
+        height: 225;
+        font-size: 8px;
+        margin-top: 3vh;
+
+    }
 `
 
 const ContainerIcon = styled.div`
@@ -52,13 +63,24 @@ const ContainerIcon = styled.div`
     margin-top: 2vh;
     h1{
         margin-left: 0;
+        @media (max-width: 800px){
+            font-size: 20px;
+
     }
-   
+    }
+    @media (max-width: 800px){
+        margin-left: 0;
+    }
 `
 
 const LogoHeader = styled.img`
     width:40px;
     height:40px;
+    @media (max-width: 800px){
+        width: 25px;
+        height: 25px;
+
+    }
 `
 
 const ImagemCarrinho = styled.img`
@@ -70,6 +92,13 @@ const ImagemCarrinho = styled.img`
         cursor: pointer;
     }
 
+    @media (max-width: 800px){
+        width: 30px;
+        height: 30px;
+        margin-right: 0;
+        margin-top:3vh;
+        margin-left: 2vh;
+    }
 `
 
 const Contador = styled.div`
@@ -84,6 +113,14 @@ const Contador = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 800px){
+        width: 15px;
+        height: 15px;
+        font-size: 8px;
+        margin-top: 1vh;
+
+    }
 `
 
 class Header extends React.Component {
