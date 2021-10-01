@@ -39,6 +39,7 @@ const Button = styled.button`
         cursor: pointer;
         color: black    ;
     }
+
 `
 
 const ContainerIcon = styled.div`
@@ -52,12 +53,12 @@ const ContainerIcon = styled.div`
     h1{
         margin-left: 0;
     }
+   
 `
 
 const LogoHeader = styled.img`
     width:40px;
     height:40px;
-    /* margin-right: 12px; */
 `
 
 const ImagemCarrinho = styled.img`
@@ -68,6 +69,7 @@ const ImagemCarrinho = styled.img`
     :hover{
         cursor: pointer;
     }
+
 `
 
 const Contador = styled.div`

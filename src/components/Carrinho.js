@@ -11,7 +11,13 @@ const Detalhe = styled.div`
     height: 10vh;
     border-radius: 10px 20px;
     border-radius:1px solid red;
-    
+    @media (max-width: 800px){
+        display: grid;
+        grid-template-columns: 50vw 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 40vh;
+        padding: 0;
+    }
 `
 
 const MainContainerCarrinho = styled.div`
@@ -31,6 +37,14 @@ const ContainerTitulo = styled.div`
     align-items: center;
     justify-content: center;
     color: black;
+    @media (max-width: 800px){
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding:0;
+        margin:0;
+        text-align: center;
+        justify-content: center;
+    }
 `
 
 const ContainerPagamento = styled.div`
@@ -39,6 +53,13 @@ const ContainerPagamento = styled.div`
     align-items: center;
     justify-content: space-between;
     color: black;
+    @media (max-width: 800px){
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: center;
+        justify-content: center;
+        font-size: 12px;
+    }
 `
 
 const ContainerPreco = styled.div`
@@ -47,6 +68,15 @@ const ContainerPreco = styled.div`
     align-items: center;
     justify-content: space-between;
     color: black;
+    @media (max-width: 800px){
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
 `
 
 const Preco = styled.div`
@@ -72,6 +102,13 @@ const Button = styled.button`
         cursor: pointer;
         color: black    ;
     }
+
+    @media (max-width: 800px){
+        font-size: 10px;
+        width: 15vw;
+        height: 50px;
+    }
+    
 `
 
 const ValorTotal = styled.div`
@@ -108,6 +145,13 @@ const ButtonLimpar = styled.button`
         background-color: ghostwhite;
         cursor: pointer;
         color: black    ;
+    }
+`
+
+const DivBotao = styled.div`
+    @media (max-width: 800px){
+        grid-column: 2/3;
+        grid-row: 2/3;
     }
 `
 
@@ -160,9 +204,9 @@ class Carrinho extends React.Component {
                             R${job.price}
                         </Preco>
                     </ContainerPreco>
-                    <div>
+                    <DivBotao>
                         <Button onClick={() => this.props.onClickExcluirCarrinho(job)} >Excluir do Carrinho</Button>
-                    </div>
+                    </DivBotao>
                 </Detalhe>
             )
         })

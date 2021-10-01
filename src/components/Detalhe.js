@@ -17,6 +17,10 @@ const ContainerSecundario = styled.div`
     display: grid;
     grid-template-columns: 1fr 30VW 25vw;
     color: black;
+    @media (max-width: 800px){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 12vh 1fr;
+    }
 `
 
 const ContainerDescricao = styled.div`
@@ -24,6 +28,12 @@ const ContainerDescricao = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 800px){
+        grid-column: 1/2;
+        grid-row: 1/3;
+        text-align: center;
+        justify-content: start;
+    }
 `
 
 const ContainerPagamento = styled.div`
@@ -31,6 +41,12 @@ const ContainerPagamento = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 800px){
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: center;
+        justify-content: start;
+    }
 `
 const Button = styled.button`
     height: 20px;
@@ -51,6 +67,22 @@ const Button = styled.button`
         background-color: ghostwhite;
         cursor: pointer;
         color: black    ;
+    }
+
+    
+    @media (max-width: 800px){
+        font-size: 10px;
+        width: 20vw;
+        height: 50px;
+    }
+`
+
+const ContainerBotao = styled.div`
+     @media (max-width: 800px){
+        grid-column: 2/3;
+        grid-row: 1/2;
+        text-align: center;
+        justify-content: start;
     }
 `
 
@@ -83,9 +115,9 @@ class Detalhe extends React.Component{
                             R${this.props.jobDetalhe.price},00
                         </div>
                     </ContainerPagamento>
-                    <div>
+                    <ContainerBotao>
                         <Button onClick={() => this.props.onClickAdicionar(this.props.jobDetalhe)} >Adicionar ao Carrinho</Button>
-                    </div>
+                    </ContainerBotao>
                 </ContainerSecundario>
             </MainContainerDetalhe>
         )
