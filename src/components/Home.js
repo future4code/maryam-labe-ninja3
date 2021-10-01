@@ -84,10 +84,7 @@ const MainHome = styled.div`
     display: grid;
 
     grid-template-columns: 1fr 1fr;
-<<<<<<< HEAD
     min-height: 80vh;
-=======
->>>>>>> master
     
 `
 
@@ -111,21 +108,13 @@ const ContainerInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     height: 70vh;
-=======
->>>>>>> master
     h2 {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
     p {
         text-align: center;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-<<<<<<< HEAD
-=======
-
-
->>>>>>> master
     }
    
 `
@@ -139,12 +128,8 @@ class Home extends React.Component{
                 </ContainerImagem>
                 <ContainerInfo>
                     <h2>Quem Somos</h2>
-<<<<<<< HEAD
                     <p>
                         Somos uma empresa especializada em serviços. Usamos nosso site para conectar pessoas 
-=======
-                    <p>Somos uma empresa especializada em serviços. Usamos nosso site para conectar pessoas 
->>>>>>> master
                         que querem trabalhar e pessoas que querem contratar o serviço, fazendo assim com que facilite 
                         a contratação e prestacão de qualquer tipo de trabalho.
                         Totalmente pratico e seguro.
