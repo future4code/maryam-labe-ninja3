@@ -12,7 +12,6 @@ const Detalhe = styled.div`
     border-radius: 10px 20px;
     border-radius:1px solid red;
     
-
 `
 
 const MainContainerCarrinho = styled.div`
@@ -20,7 +19,7 @@ const MainContainerCarrinho = styled.div`
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-
+    min-height: 80vh;
     h1{
         color:black;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -59,17 +58,15 @@ const Button = styled.button`
     width: 150px;
     margin-left: 5vw;
     margin-top: 3vh;
-    background-color: #9869BF;
+    background-color: white;
     border: none;
-    border-bottom: 1px solid #DFDCEF;
-    color: #DFDCEF;
-
+    border-bottom: 1px solid black;
+    color: black;
     :hover{
         background-color: #DFDCEF;
         cursor: pointer;
         color: black    ;
     }
-
     :active{
         background-color: ghostwhite;
         cursor: pointer;
@@ -86,10 +83,32 @@ const ValorTotal = styled.div`
 `
 
 const DivInvisivel = styled.div`
-    background-color: #9869BF;
+    background-color: #A9A9A9;
     margin-top: 4vh;
     width: 90vw;
     height: 2px;
+`
+
+const ButtonLimpar = styled.button`
+    height: 20px;
+    width: 150px;
+    background-color: #DFDCEF;
+    border: none;
+    border-bottom: 1px solid black;
+ 
+    color: black;
+
+    :hover{
+        background-color: white;
+        cursor: pointer;
+        color: black;
+    }
+
+    :active{
+        background-color: ghostwhite;
+        cursor: pointer;
+        color: black    ;
+    }
 `
 
 class Carrinho extends React.Component {
@@ -150,6 +169,7 @@ class Carrinho extends React.Component {
         return(
             <MainContainerCarrinho>
                 <h1>Seu Carrinho</h1>
+                <ButtonLimpar onClick={this.props.limparCarrinho} >Limpar Carrinho</ButtonLimpar>
                 {renderizaCarrinho}
                 <DivInvisivel ></DivInvisivel >
                 {this.valorTotal()}

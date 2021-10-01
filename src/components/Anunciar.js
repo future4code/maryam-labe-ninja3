@@ -1,3 +1,23 @@
+// import React from "react";
+// import axios from "axios";
+// import styled from "styled-components";
+
+// const PageCadastro = styled.div `
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 80vh;
+  
+//   h3 {color: #9869BF}
+// `
+
+// const headers = {
+//     headers: {
+//         Authorization: "e91a8334-e12c-42bc-b37f-a45f4631ab2a"
+//     }
+// }
+
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
@@ -7,7 +27,11 @@ const PageCadastro = styled.div `
   flex-direction: column;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
+  min-height: 80vh;
+=======
 
+>>>>>>> master
   input {
       
       border-radius: 3px 3px 3px;
@@ -20,6 +44,28 @@ const PageCadastro = styled.div `
   h3 {color: black}
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 25px;
+<<<<<<< HEAD
+`
+
+const Button = styled.button`
+    height: 20px;
+    width: 8vw;
+    background-color: #DFDCEF;
+    border: none;
+    border-bottom: 1px solid #A9A9A9;
+    color: black;
+
+    :hover{
+        cursor: pointer;
+        background-image: linear-gradient(to bottom right, #D3D3D3, white);
+    }
+    :active{
+        background-color: ghostwhite;
+        cursor: pointer;
+        color: black    ;
+    }
+=======
+>>>>>>> master
 `
 
 const headers = {
@@ -29,14 +75,17 @@ const headers = {
 }
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 class Anunciar extends React.Component{
     state = {
         tituloDoServico: "",
         descricaoDoSevico: "",
         valorDoServico: "",
         formaDePagamento: [],
-        prazoDoServico: ""
+        prazoDoServico: "",
     }
     
     inserirTitulo = (event) => {
@@ -52,10 +101,25 @@ class Anunciar extends React.Component{
     }
     
     inserirFormaDePagamento = (event) => {
-        let value = Array.from(
-            event.target.selectedOptions,
-            (option) => option.value
-        )
+
+        let formaRepetida = false
+
+        for (let forma of this.state.formaDePagamento){
+            if (forma === event.target.value){
+                formaRepetida = true
+            }
+        }
+
+        let value = [... this.state.formaDePagamento]
+
+        if (formaRepetida === true){
+            value = this.state.formaDePagamento.filter((forma) => {
+                return (forma !== event.target.value)
+            })
+        } else {
+            value.push(event.target.value)
+        }
+
         this.setState({formaDePagamento: value})
     }
     
@@ -114,17 +178,20 @@ class Anunciar extends React.Component{
                     onChange={this.inserirValor}
                 />
                 <br></br>
-                <select 
-                    multiple
-                    value={this.state.formaDePagamento}
-                    onChange={this.inserirFormaDePagamento}
-                >
-                    <option>Boleto</option>
-                    <option>Cartão de Crédito</option>
-                    <option>Cartão de Débito</option>
-                    <option>PicPay</option>
-                    <option>PIX</option>
-                </select>
+                <div>
+                    <label htmlFor="credito">Cartão de Crédito</label>
+                    <input id="credito" type='checkbox' value='Cartão de Crédito' onChange={this.inserirFormaDePagamento}/> 
+                    <label htmlFor="Debito">Cartão de Débito</label>
+                    <input id="Debito" type='checkbox' value='Cartão de Débito' onChange={this.inserirFormaDePagamento}/> 
+                    <label htmlFor="pix">Pix</label>
+                    <input id="pix" type='checkbox' value='Pix' onChange={this.inserirFormaDePagamento}/> 
+                    <label htmlFor="btc">Bitcoin</label>
+                    <input id="btc" type='checkbox' value='Bitcoin' onChange={this.inserirFormaDePagamento}/> 
+                    <label htmlFor="picpay">PicPay</label>
+                    <input id="picpay" type='checkbox' value='PicPay' onChange={this.inserirFormaDePagamento}/> 
+                    <label htmlFor="boleto">Boleto</label>
+                    <input id="boleto" type='checkbox' value='Boleto' onChange={this.inserirFormaDePagamento}/> 
+                </div>
                 <br></br>
                 <input 
                     type="date"
@@ -132,7 +199,7 @@ class Anunciar extends React.Component{
                     onChange={this.inserirPrazo}
                 />
                 <br></br>
-                <button onClick={this.adicionarCasdatro}>Cadastrar</button>
+                <Button onClick={this.adicionarCasdatro}>Cadastrar</Button>
             </PageCadastro>
         )
     }

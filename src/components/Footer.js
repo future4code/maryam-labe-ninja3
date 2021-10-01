@@ -1,9 +1,55 @@
+// import React from 'react';
+// import styled from 'styled-components';
+
+// const MainContainerFooter = styled.div`
+//     background-color: #9869BF;
+//     height: 10vh;
+//     /* position: fixed;
+//     bottom: 0;
+//     right: 0;
+//     left: 0; */
+    
+//     .page-wrap:after{
+//         height: 10vh;
+//     }
+// /* 
+//     .page-wrap:after {
+//   height: 60px; 
+// }
+//      */
+//     h3{
+//         margin-left: 3vw;
+//         color: #DFDCEF;
+//     }
+// `
+
+// class Footer extends React.Component{
+//     render(){
+//         return(
+//             <MainContainerFooter>
+//                 <h3>Eu sou o Footer</h3>
+//             </MainContainerFooter>
+//         )
+//     }
+// }
+
+// export default Footer
+
 import React from 'react';
 import styled from 'styled-components';
 import Home from './Home';
 
 const MainContainerFooter = styled.div`
     background-image: linear-gradient(to bottom, #808080, black);
+<<<<<<< HEAD
+    
+    .page-wrap:after{
+        height: 20vh
+    }
+
+    display: flex;
+    justify-content: space-between;
+=======
     height: 20vh;
     position: fixed;
     bottom: 0;
@@ -13,12 +59,16 @@ const MainContainerFooter = styled.div`
     justify-content: space-between;
 
 
+>>>>>>> master
     
     img{
         width: 80px;
         height: 80px;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
     p{
         font-size: 10px;
         color: white;
@@ -35,17 +85,26 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin-right: 20px;
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 `
 const ColunaLinks = styled.div`
 display: grid;
 grid-template-columns: 1fr;
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 `
 const ColunaRedesSociais = styled.div`
 display: flex;
 justify-content: space-between;
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
 img {
     width: 40px;
     height: 40px;

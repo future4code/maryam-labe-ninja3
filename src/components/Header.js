@@ -8,7 +8,6 @@ const MainContainerHeader = styled.div`
     justify-content: space-between;
     background-color: #A9A9A9;
     height: 10vh;
-
     h1{
         margin-left: 3vw;
         color: white;
@@ -30,16 +29,13 @@ const Button = styled.button`
     font-size: 1rem;
      
     
-
     :hover{
         
         cursor: pointer;
         color: #4F4F4F    ;
         
     }
-
     :active{
-        background-color: ;
         cursor: pointer;
         color: black    ;
     }
@@ -53,7 +49,6 @@ const ContainerIcon = styled.div`
     border-radius: 8px;  
     margin-left: 4vw;
     margin-top: 2vh;
-
     h1{
         margin-left: 0;
     }
@@ -70,7 +65,6 @@ const ImagemCarrinho = styled.img`
     width:60px;
     height:60px;
     margin-top: 1vh;
-
     :hover{
         cursor: pointer;
     }
@@ -96,7 +90,7 @@ class Header extends React.Component {
             <MainContainerHeader>
                 <ContainerIcon>
                     <LogoHeader src={icone1} />
-                    <h1>LabeNinja</h1>
+                    <h1>LabeNinjas</h1>
                 </ContainerIcon>
                 <Button onClick={this.props.onClickHome} >Home</Button>
                 <Button onClick={this.props.onClickAnunciar} >Anunciar Serviço</Button>

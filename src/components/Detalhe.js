@@ -6,16 +6,17 @@ const MainContainerDetalhe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
 
     h1{
-        color: #9869BF;
+        color: black;
     }
 `
 
 const ContainerSecundario = styled.div`
     display: grid;
     grid-template-columns: 1fr 30VW 25vw;
-    color: #9869BF;
+    color: black;
 `
 
 const ContainerDescricao = styled.div`
@@ -38,13 +39,12 @@ const Button = styled.button`
     margin-top: 3vh;
     background-color: #DFDCEF;
     border: none;
-    border-bottom: 1px solid #9869BF;
-    color: #9869BF;
+    border-bottom: 1px solid black;
+    color: black;
 
     :hover{
-        background-color: #9869BF;
         cursor: pointer;
-        color: black    ;
+        background-image: linear-gradient(to bottom right, #D3D3D3, white);
     }
 
     :active{
