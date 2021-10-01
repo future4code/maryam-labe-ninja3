@@ -41,6 +41,7 @@ import Home from './Home';
 
 const MainContainerFooter = styled.div`
     background-image: linear-gradient(to bottom, #808080, black);
+<<<<<<< HEAD
     
     .page-wrap:after{
         height: 20vh
@@ -48,11 +49,26 @@ const MainContainerFooter = styled.div`
 
     display: flex;
     justify-content: space-between;
+=======
+    height: 20vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+
+
+>>>>>>> master
     
     img{
         width: 80px;
         height: 80px;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     p{
         font-size: 10px;
         color: white;
@@ -69,14 +85,26 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 margin-right: 20px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 `
 const ColunaLinks = styled.div`
 display: grid;
 grid-template-columns: 1fr;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 `
 const ColunaRedesSociais = styled.div`
 display: flex;
 justify-content: space-between;
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 img {
     width: 40px;
     height: 40px;

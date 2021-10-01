@@ -54,7 +54,11 @@ import styled from "styled-components";
 
 const Detalhe = styled.div`
     background-color: white;
+<<<<<<< HEAD
     width: 40vw;
+=======
+    width: 25vw;
+>>>>>>> master
     display: grid;
     grid-template-columns: 10vw 1fr 10vw;
     margin-top: 3vh;
@@ -84,7 +88,10 @@ const ContainerTitulo = styled.div`
     color: black;
     font-size: 25px;
     margin-left: 10px;
+<<<<<<< HEAD
     width: 15vw;
+=======
+>>>>>>> master
     
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `
@@ -95,12 +102,18 @@ const ContainerPagamento = styled.div`
     align-items: center;
     color: black;
     margin-top: 50px;
+<<<<<<< HEAD
     margin-right: 0;
     margin-left: 6vw;
     width: 14vw;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
    
+=======
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    
+>>>>>>> master
 `
 
 const ContainerPreco = styled.div`
@@ -111,12 +124,17 @@ const ContainerPreco = styled.div`
     color: black;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 50px; 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     
 `
 const Preco = styled.div`
     
     margin-bottom: 80px;
     
+<<<<<<< HEAD
 `
 
 const ContainerGeral = styled.div`
@@ -222,6 +240,8 @@ const ButtonLimpar = styled.button`
         cursor: pointer;
         color: black    ;
     }
+=======
+>>>>>>> master
 `
 
 class Pesquisar extends React.Component{
@@ -237,6 +257,7 @@ class Pesquisar extends React.Component{
                         <div>
                             Métodos de pagamento:
                         </div>
+                        <br/>
                         <div>
                             {(job.paymentMethods[0] !== "") && job.paymentMethods[0]}
                         </div>
@@ -249,7 +270,7 @@ class Pesquisar extends React.Component{
                     </ContainerPagamento>
                     <ContainerPreco>
                         <div>
-                            Preço Unitário:
+                           <p> Preço Unitário:</p>
                         </div>
                         <Preco>
                             R${job.price},00

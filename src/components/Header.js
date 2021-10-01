@@ -36,7 +36,6 @@ const Button = styled.button`
         
     }
     :active{
-        background-color: ;
         cursor: pointer;
         color: black    ;
     }

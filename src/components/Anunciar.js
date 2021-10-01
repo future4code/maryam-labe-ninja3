@@ -27,7 +27,11 @@ const PageCadastro = styled.div `
   flex-direction: column;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   min-height: 80vh;
+=======
+
+>>>>>>> master
   input {
       
       border-radius: 3px 3px 3px;
@@ -40,6 +44,7 @@ const PageCadastro = styled.div `
   h3 {color: black}
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 25px;
+<<<<<<< HEAD
 `
 
 const Button = styled.button`
@@ -59,6 +64,8 @@ const Button = styled.button`
         cursor: pointer;
         color: black    ;
     }
+=======
+>>>>>>> master
 `
 
 const headers = {
@@ -68,6 +75,10 @@ const headers = {
 }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 class Anunciar extends React.Component{
     state = {
         tituloDoServico: "",
