@@ -54,6 +54,7 @@ import HomeResponsividade from "./responsividade/Home/Home.css"
 //     color: #9869BF;
 // `
 
+
 const Button = styled.button`
     width: 184px;
     height: 36px;
