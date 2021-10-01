@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
-    background-color: white;
+    background-color: #DFDCEF;
   }
 `;
 export default GlobalStyle
