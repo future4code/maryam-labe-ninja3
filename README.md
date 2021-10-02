@@ -1,3 +1,28 @@
+<h1>LabeNinjas</h1>
+
+O projeto **LabeNinjas** consiste em uma plataforma onde pessoas podem anunciar seus serviços para que outras pessoas possam contratá-las. Para isso, foram desenvolvidas duas páginas: Anunciar, onde as pessoas cadastram seus serviços a partir de um formulário e Pesquisar, onde outras pessoas podem pesquisar por serviços aos quais tem interesse, com a ajuda de filtros por valor -- máximo e/ou mínimo -- e por nome -- uma pesquisa para encontrar seu serviço desejado --, além de botões de ordenação, que ordenam os resultados a partir do valor, nome ou prazo de realização, todos em orde crescente ou decrescente. 
+
+Ao clicar em cada produto desejado, o interessado na contratação do serviço é levado à uma página de detalhe do serviço, onde ele pode visualizar o nome do serviço, uma breve descrição, os métodos de pagamento e o valor da remuneração. Além disso, há um botão para adicionar o serviço ao carrinho, caso a pessoa realmente esteja interessada no serviço. 
+
+No carrinho, é possível visualizar uma lista de todos os serviços escolhidos. Não é possível adicionar um serviço mais de uma vez. Além da visualização dos serviços, é possível visualizar o valor total dos serviços escolhidos, além da possibilidade de limpar todo o carrinho ou excluir um item individualmente. 
+
+<h3>Link Para o Surge</h3>
+
+O link para o *Surge* do nosso projeto está disponivel logo abaixo:
+
+https://holistic-afternoon.surge.sh/
+
+<h3>Responsividade</h3>
+
+O site **LabeNinjas** é responsivo. Ou seja, você pode visualizar nosso trabalho tanto por plataformas *mobile* quanto por platafromas *desktop*.
+
+<h3>Equipe</h3>
+
+A equipe responsável pela elaboração do projeto foi composta por: Gabriel Manoel, Luis Ricardo da Silva, Roberval Dionisio Pereira Filho, Silvio Ribeiro Dias Jr. e Sthefane Oliveira.
+
+<hr />
+<hr />
+
 <h1>Andameto do Projeto</h1>
   
 28/09/2021
