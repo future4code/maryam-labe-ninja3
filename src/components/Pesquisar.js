@@ -69,6 +69,11 @@ const Detalhe = styled.div`
         cursor: pointer;
         background-image: linear-gradient(to bottom right, #D3D3D3, white);
     }
+
+    @media (max-width: 800px){
+        width: 80vw;
+        display: flex;
+    }
 `
 
 const MainContainerPesquisa = styled.div`
@@ -87,6 +92,14 @@ const ContainerTitulo = styled.div`
     width: 15vw;
     
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    @media (max-width: 800px){
+        font-size: 20px;
+        width: 30vw;
+        align-items: center;
+        justify-content: center;
+
+    }
 `
 
 const ContainerPagamento = styled.div`
@@ -99,7 +112,12 @@ const ContainerPagamento = styled.div`
     margin-left: 6vw;
     width: 14vw;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
+    @media (max-width: 800px){
+        font-size: 10px;
+        width: 25vw;
+        align-items: center;
+        /* justify-content: center; */
+    }
    
 `
 
@@ -111,7 +129,12 @@ const ContainerPreco = styled.div`
     color: black;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-top: 50px; 
-    
+    @media (max-width: 800px){
+        font-size: 10px;
+        width: 15vw;
+        align-items: center;
+        justify-content: center;
+    }
 `
 const Preco = styled.div`
     
@@ -137,14 +160,27 @@ const DivFiltros = styled.div`
     width: 40vw;
     margin-right: 4vw;
     color: black;
+
+    @media (max-width: 800px){
+        width: 80vw;
+        height: 30vh;
+    }
 `
 
 const DivFiltroOrdenacao = styled.div`
     display: flex;
     height: 30vh;
+
+    @media (max-width: 800px){
+        flex-direction: column;
+        height: 70vh;
+    }
 `
 const DivInputs = styled.div`
     margin-bottom: 2vh;
+    @media (max-width: 800px){
+        font-size: 10px;
+    }
 `
 const DivDeOrdenacoes = styled.div`
     display: flex;
@@ -153,6 +189,12 @@ const DivDeOrdenacoes = styled.div`
 const CardsOrdenacoes = styled.div`
     margin-right: 2vw;
     border-right: 2px solid #A9A9A9;
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
 const Input = styled.input`
@@ -161,6 +203,11 @@ const Input = styled.input`
     border-bottom: 1px solid #A9A9A9;
     width: 6vw;
     margin-left: 2vw;
+
+    @media (max-width: 800px){
+        font-size: 8px;
+        width: 16vw;
+    }
 `
 
 const Button = styled.button`
@@ -180,6 +227,13 @@ const Button = styled.button`
         background-color: ghostwhite;
         cursor: pointer;
         color: black    ;
+    }
+
+    @media (max-width: 800px){
+        font-size: 10px;
+        margin-left: 8vw;
+        width: 30vw;
+
     }
 `
 
@@ -202,6 +256,11 @@ const ButtonNome = styled.button`
         cursor: pointer;
         color: black    ;
     }
+
+    @media (max-width: 800px){
+        font-size: 10px;
+        margin-left: 6vw;
+    }
 `
 
 const ButtonLimpar = styled.button`
@@ -221,6 +280,10 @@ const ButtonLimpar = styled.button`
         background-color: ghostwhite;
         cursor: pointer;
         color: black    ;
+    }
+
+    @media (max-width: 800px){
+        font-size: 10px;
     }
 `
 
