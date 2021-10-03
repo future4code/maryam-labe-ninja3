@@ -86,6 +86,13 @@ const MainHome = styled.div`
 
     grid-template-columns: 1fr 1fr;
     min-height: 80vh;
+
+    @media (max-width: 800px){
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8vh;
+
+    }
     
 `
 
@@ -97,6 +104,10 @@ const ContainerImagem = styled.div`
 
 const ImagemLogo = styled.img`
     margin-top: 8vh;
+    @media (max-width: 800px){
+        width: 70vw;
+        height: auto;
+    }
 `
 
 const ContainerInfo = styled.div`
@@ -117,8 +128,17 @@ const ContainerInfo = styled.div`
         text-align: center;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
+
+    @media (max-width: 800px){
+        width: 70vw;
+        margin-left: 8vh;
+        height: 90vh;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
    
 `
+
 
 class Home extends React.Component{
     render(){
